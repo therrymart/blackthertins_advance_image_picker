@@ -20,13 +20,13 @@ import 'media_album.dart';
 /// Picker mode definition: Camera or Album (Photo gallery of device)
 class PickerMode {
   /// Camera picker.
-  // TODO(rydmike): This const property name does not conform to Dart standards,
+  // TODO(blackthertins): This const property name does not conform to Dart standards,
   //   but fixing it is a breaking change, thus not changed yet.
   // ignore: constant_identifier_names
   static const int Camera = 0;
 
   /// Album picker.
-  // TODO(rydmike): This const property name does not conform to Dart standards,
+  // TODO(blackthertins): This const property name does not conform to Dart standards,
   //   but fixing it is a breaking change, thus not changed yet.
   // ignore: constant_identifier_names
   static const int Album = 1;
@@ -570,7 +570,7 @@ class _ImagePickerState extends State<ImagePicker>
     Navigator.of(context).pop(_selectedImages);
   }
 
-  // TODO(rydmike): The image picker uses a lot of Widget build functions.
+  // TODO(blackthertins): The image picker uses a lot of Widget build functions.
   //   This may sometimes be inefficient and even an anti-pattern in Flutter.
   //   It is not always a bad thing though. Still we should review it later
   //   and see if there are critical ones that it would be better to replace
@@ -586,7 +586,7 @@ class _ImagePickerState extends State<ImagePicker>
     switch (_configs.doneButtonStyle) {
       case DoneButtonStyle.outlinedButton:
         return Padding(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
             child: Button(
               onPressed: (_selectedImages.isNotEmpty)
                   ? () {
@@ -594,7 +594,7 @@ class _ImagePickerState extends State<ImagePicker>
                     }
                   : () {},
               variant: 'filled',
-              label: _configs.textSelectButtonTitle,
+              label: _configs.textSelectButtonTitle ?? "Select",
               loading: _isOutputCreating,
             ));
       case DoneButtonStyle.iconButton:
@@ -754,15 +754,15 @@ class _ImagePickerState extends State<ImagePicker>
       {bool isPop = false, bool isCameraMode = false}) {
     if (isCameraMode) {
       return Text(_configs.textCameraTitle,
-          style: TextStyle(color: _configs.appBarTextColor, fontSize: 16));
+          style: TextStyle(color: _configs.appBarTextColor, fontSize: 20));
     }
 
     final size = MediaQuery.of(context).size;
     final container = Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(8),
             color: Colors.black.withOpacity(0.1)),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [

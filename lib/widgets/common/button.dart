@@ -274,8 +274,11 @@ class Button extends StatelessWidget {
     assert(!(label == null && icon == null),
         'Label and icon cannot both be empty');
 
-    final style = const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)
-        .merge(overrideStyle);
+    final style = const TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w600,
+      overflow: TextOverflow.ellipsis,
+    ).merge(overrideStyle);
     if (label != null) return Text(label!, style: style);
 
     return Text(

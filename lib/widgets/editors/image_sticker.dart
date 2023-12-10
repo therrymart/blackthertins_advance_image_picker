@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -348,7 +347,7 @@ class _ImageStickerState extends State<ImageSticker>
 }
 
 /// Sticker view.
-// TODO(Rydmike): This Widget is not following Flutter recommendations.
+// TODO(blackthertins): This Widget is not following Flutter recommendations.
 //   That is the reason why we must ignore the lint rule. We should consider
 //   reviewing the mutable usage here, and make an another implementation.
 // ignore: must_be_immutable
