@@ -3,7 +3,6 @@ import 'dart:typed_data';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:photo_manager/photo_manager.dart';
 
 import '../../models/image_object.dart';
@@ -218,7 +217,7 @@ class MediaAlbumState extends State<MediaAlbum> {
                     top: 10,
                     right: 10,
                     child: Icon(Icons.check_circle,
-                        color: Colors.pinkAccent, size: 24))
+                        color: Color(0xFF32A854), size: 24))
             ]),
           );
         });

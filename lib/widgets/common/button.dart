@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-const primaryColor = Color(0xFF6C63FF);
+const primaryColor = Color(0xFF32A854);
 
 class Button extends StatelessWidget {
   final void Function() onPressed;

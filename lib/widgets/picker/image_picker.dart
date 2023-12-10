@@ -79,7 +79,7 @@ class _ImagePickerState extends State<ImagePicker>
   List<CameraDescription> _cameras = [];
 
   /// Default mode for selecting images.
-  int _mode = PickerMode.Camera;
+  int _mode = PickerMode.Album;
 
   /// Camera controller
   CameraController? _controller;
@@ -97,7 +97,7 @@ class _ImagePickerState extends State<ImagePicker>
   FlashMode _flashMode = FlashMode.auto;
 
   /// Flag to check image guideline is on or off
-  bool _isImageGuidelineOn = true;
+  bool _isImageGuidelineOn = false;
 
   /// Flag indicating state of camera, which capturing or not.
   bool _isCapturing = false;
@@ -1132,7 +1132,7 @@ class _ImagePickerState extends State<ImagePicker>
               child: Container(
                 margin: const EdgeInsets.all(2),
                 decoration: const BoxDecoration(
-                  color: Color(0xff6C63FF), // border color
+                  color: Color(0xFF32A854), // border color
                   shape: BoxShape.circle,
                 ),
                 alignment: Alignment.center,
@@ -1241,7 +1241,7 @@ class _ImagePickerState extends State<ImagePicker>
                           color: Colors.grey,
                           border: Border.all(
                               color: (i == _selectedImages.length)
-                                  ? const Color(0xff6C63FF)
+                                  ? const Color(0xFF32A854)
                                   : Colors.white,
                               width: 3),
                           borderRadius:
@@ -1493,12 +1493,12 @@ class _ImagePickerState extends State<ImagePicker>
 
     final ButtonStyle styleAuto = TextButton.styleFrom(
       primary: _controller?.value.exposureMode == ExposureMode.auto
-          ? const Color(0xff6C63FF)
+          ? const Color(0xFF32A854)
           : Colors.white,
     );
     final ButtonStyle styleLocked = TextButton.styleFrom(
       primary: _controller?.value.exposureMode == ExposureMode.locked
-          ? const Color(0xff6C63FF)
+          ? const Color(0xFF32A854)
           : Colors.white,
     );
 
