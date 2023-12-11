@@ -216,8 +216,8 @@ class MediaAlbumState extends State<MediaAlbum> {
                 const Positioned(
                     top: 10,
                     right: 10,
-                    child: Icon(Icons.check_circle,
-                        color: Color(0xFF32A854), size: 24))
+                    child:
+                        Icon(Icons.check_circle, color: Colors.white, size: 24))
             ]),
           );
         });
